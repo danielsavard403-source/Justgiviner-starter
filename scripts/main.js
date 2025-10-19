@@ -36,7 +36,11 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (email && isValidEmail(email)) {
                 // Store the email (in a real app, this would send to a server)
-                localStorage.setItem('newsletter_email', email);
+                let emails = JSON.parse(localStorage.getItem('newsletter_emails') || '[]');
+                if (!emails.includes(email)) {
+                    emails.push(email);
+                    localStorage.setItem('newsletter_emails', JSON.stringify(emails));
+                }
                 
                 // Show success message
                 subscribeMessage.textContent = '🎉 Success! You\'ve been added to our bi-weekly newsletter. Prepare for sarcastic wisdom!';
