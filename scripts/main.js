@@ -40,11 +40,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (!emails.includes(email)) {
                     emails.push(email);
                     localStorage.setItem('newsletter_emails', JSON.stringify(emails));
-                }
                 
-                // Show success message
-                subscribeMessage.textContent = '🎉 Success! You\'ve been added to our bi-weekly newsletter. Prepare for sarcastic wisdom!';
-                subscribeMessage.style.color = '#fff';
+                    // Show success message
+                    subscribeMessage.textContent = '🎉 Success! You\'ve been added to our bi-weekly newsletter. Prepare for sarcastic wisdom!';
+                    subscribeMessage.style.color = '#fff';
+                } else {
+                    // Email already subscribed
+                    subscribeMessage.textContent = '📧 You\'re already subscribed! No need to sign up again.';
+                    subscribeMessage.style.color = '#fff';
+                }
                 
                 // Clear the input
                 emailInput.value = '';
