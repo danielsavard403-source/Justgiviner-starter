@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justgiviner - Home</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">Justgiviner</h1>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li><a href="patreon.html">Patreon</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h2>Welcome to Justgiviner</h2>
+            <p>Your source for sarcastic wisdom and weekly insights</p>
+        </section>
+
+        <!-- Questions for the Almighty Section -->
+        <section class="question-section">
+            <h3>Questions for the Almighty</h3>
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="almightyQuestion" 
+                    placeholder="Ask the almighty anything..." 
+                    class="question-input"
+                />
+                <button onclick="askAlmighty()" class="ask-button">Ask</button>
+            </div>
+            <div id="almightyAnswer" class="answer-container"></div>
+        </section>
+
+        <!-- Newsletter Signup Section -->
+        <section class="newsletter-section">
+            <h3>Join Our Newsletter</h3>
+            <p>Get AI-generated wisdom delivered to your inbox bi-weekly</p>
+            <form id="newsletterForm" class="newsletter-form">
+                <input 
+                    type="email" 
+                    id="emailInput" 
+                    placeholder="Enter your email" 
+                    required 
+                    class="email-input"
+                />
+                <button type="submit" class="subscribe-button">Subscribe</button>
+            </form>
+            <div id="subscribeMessage" class="subscribe-message"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Justgiviner. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
